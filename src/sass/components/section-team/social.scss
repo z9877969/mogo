@@ -1,0 +1,42 @@
+@import "../../utils/mixins.scss";
+
+.social {
+  &__list {
+    width: 227px;
+    height: 56px;
+    @include flex(space-between, unset);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__item {
+    width: 56px;
+    height: 56px;
+    background: $primary-accent-color;
+  }
+
+  &__link {
+    width: 56px;
+    height: 56px;
+    @include flex(center, center);
+
+    &:hover {
+      @include hover(background-color, $social-bg-hover);
+    }
+
+    &:hover .social__icon {
+      @include hover(fill, $primary-white-color);
+    }
+  }
+
+  &__icon {
+    width: 26px;
+    height: 26px;
+    fill: $social-icon-color;
+  }
+}

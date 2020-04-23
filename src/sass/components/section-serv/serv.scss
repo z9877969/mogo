@@ -1,0 +1,60 @@
+@import "../../utils//mixins";
+
+.serv {
+  &__title {
+    width: 317px;
+    margin-bottom: 65px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: $under-title-color;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+  }
+
+  &__list {
+    max-width: 1182px;
+    margin: 0 auto 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    display: block;
+    width: 32px;
+    height: 31px;
+    margin: 0 28px 0 22px;
+    margin-top: 2px;
+    fill: $serv-icon-color;
+  }
+
+  &__item {
+    width: 382px;
+    display: flex;
+
+    &--bottom {
+      margin-bottom: 96px;
+    }
+
+    &-box {
+      width: 301px;
+    }
+
+    &-title {
+      margin: 0 0 14px;
+      text-transform: uppercase;
+      @include primary-title-font(14px, 600, 1.2em);
+      color: $primary-title-color;
+    }
+
+    &-descr {
+      @include primary-descr-font(15px, 400, 24px, normal);
+      color: $primary-descr-color;
+    }
+  }
+}

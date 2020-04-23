@@ -1,0 +1,90 @@
+@import "../../utils/mixins.scss";
+
+.team {
+  &-section {
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 41px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      margin: 40px auto 0;
+      background: $under-title-color;
+    }
+
+    &-descr {
+      max-width: 980px;
+      margin: 0 auto 90px;
+      padding: 0 10px;
+      text-align: center;
+      @include primary-descr-font(15px, 400, 24px, normal);
+      color: $primary-descr-color;
+    }
+  }
+
+  &__list {
+    @include flex(space-between, unset);
+  }
+
+  &__item {
+    width: 380px;
+
+    &:hover .team__img--hover {
+      position: absolute;
+      @include hover(transform, translate(-10px, -10px));
+    }
+
+    &:hover .team__img--hover::after {
+      visibility: visible;
+      @include hover(opacity, 1);
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 380px;
+    height: 470px;
+    margin: 0 0 30px;
+    background: $team-img-bg;
+
+    &--hover {
+      &::after {
+        content: "";
+        display: block;
+        width: 380px;
+        height: 470px;
+        background: $primary-bg-gradient;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      &:hover .social__list {
+        visibility: visible;
+        @include hover(opacity, 1);
+      }
+    }
+  }
+
+  &__name {
+    margin: 0 auto 10px;
+    text-transform: uppercase;
+    @include primary-title-font(14px, 600, 1.2em);
+    color: $primary-title-color;
+    text-align: center;
+  }
+
+  &__post {
+    @include primary-descr-font(15px, 300, 24px, italic);
+    color: $primary-descr-color;
+    text-align: center;
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../utils/mixins.scss";
+
+.footer {
+  height: 61px;
+  border-top: 1px solid $primary-border-color;
+  @include flex(space-between, center);
+  &__copyright {
+    @include primary-title-font(14px, 600, 1.2em);
+    color: $primary-title-color;
+
+    & span {
+      color: $under-title-color;
+    }
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    width: 229px;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid $primary-border-color;
+    border-right: none;
+    @include primary-descr-font(15px, 300, 1.2em, italic);
+    @include placeholder {
+      color: $placeholder-color;
+    }
+  }
+
+  &__btn {
+    width: 150px;
+    height: 40px;
+    text-transform: uppercase;
+    @include primary-title-font(14px, 700, 1.2em);
+    color: $primary-white-color;
+    background: $serv-icon-color;
+    border: none;
+  }
+}

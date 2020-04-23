@@ -1,0 +1,27 @@
+@import "../../utils/mixins.scss";
+
+.header {
+  max-width: 1920px;
+  height: 1000px;
+  margin: 0 auto;
+  margin-bottom: 46px;
+  background-image: $primary-bg-gradient, url(../images/bg-header@1x.jpg);
+  @include bg-position(center, top);
+
+  &__menu {
+    @include flex(space-between, baseline);
+    margin-bottom: 174px;
+    padding-top: 26px;
+  }
+
+  &__menu-top {
+    width: 620px;
+    @include flex(space-between, flex-end);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .header {
+    background-image: $primary-bg-gradient, url(../images/bg-header@2x.jpg);
+  }
+}

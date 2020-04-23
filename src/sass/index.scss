@@ -1,0 +1,11 @@
+@import "base";
+@import "utils/var";
+@import "utils/mixins";
+
+@import "components/container";
+@import "components/sections-title";
+
+@import "./components/header/index";
+@import "./components/section-serv/index";
+@import "./components/section-team/index";
+@import "./components/footer/footer";

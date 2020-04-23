@@ -1,0 +1,44 @@
+@import "../../utils/mixins.scss";
+
+.main-menu {
+  width: 490px;
+  @include flex(space-between, flex-end);
+
+  &__item {
+    position: relative;
+  }
+
+  &__item:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    @include hover(background-color, $primary-accent-color);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 10px);
+  }
+
+  &__link {
+    text-transform: uppercase;
+    @include primary-title-font(14px, 500, 1.2em);
+    color: $primary-white-color;
+
+    &:hover,
+    &:focus {
+      @include hover(color, $primary-accent-color);
+    }
+
+    // to fix under-line focus
+    &:focus .main-menu__item::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      @include hover(background-color, $primary-accent-color);
+      position: absolute;
+      left: 0;
+      top: calc(100% + 10px);
+    }
+  }
+}

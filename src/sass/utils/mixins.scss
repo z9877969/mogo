@@ -1,0 +1,71 @@
+@import "./var.scss";
+
+@mixin bg-position($_posX, $_posY) {
+  background-repeat: no-repeat;
+  background-position: $_posX $_posY;
+}
+
+@mixin box-size($_W, $_H, $_M, $_P) {
+  width: $_W;
+  height: $_H;
+  margin: $_M;
+  padding: $_P;
+}
+
+@mixin flex($_just-cont, $_align-item) {
+  display: flex;
+  justify-content: $_just-cont;
+  align-items: $_align-item;
+}
+
+@mixin hover($_property, $_toValue) {
+  #{$_property}: $_toValue;
+  transition: #{$_property} 0.3s linear;
+  cursor: pointer;
+}
+
+// fonts
+@mixin primary-title-font($_f-sz, $_f-weiht, $_line-height) {
+  font-family: $primary-title-font, sans-serif;
+  font-size: $_f-sz;
+  font-weight: $_f-weiht;
+  line-height: $_line-height;
+}
+
+@mixin secondary-title-font($_f-sz, $_line-height) {
+  font-family: $secondary-title-font, cursive;
+  font-size: $_f-sz;
+  font-weight: 400;
+  line-height: $_line-height;
+}
+
+@mixin primary-descr-font($_f-sz, $_f-weiht, $_line-height, $_f-style) {
+  font-family: $primary-descr-font, sans-serif;
+  font-size: $_f-sz;
+  font-weight: $_f-weiht;
+  line-height: $_line-height;
+  font-style: $_f-style;
+}
+
+@mixin font-set($_font-size, $_font-weight, $_line-height, $_font-style) {
+  font-weight: $_font-weight;
+  font-size: $_font-size;
+  line-height: $_line-height;
+  font-style: $_font-style;
+}
+
+// placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
