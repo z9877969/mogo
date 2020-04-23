@@ -37,5 +37,11 @@
     color: $primary-white-color;
     background: $serv-icon-color;
     border: none;
+    outline: none;
+
+    &:focus {
+      @include hover(color, $primary-accent-color);
+      @include hover(outline, auto);
+    }
   }
 }

@@ -14,6 +14,19 @@
       @include hover(fill, $primary-accent-color);
     }
 
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      @include hover(background-color, $primary-accent-color);
+      left: 0;
+      top: calc(100% + 12px);
+      visibility: hidden;
+      opacity: 0;
+    }
+
     &:hover::after {
       content: "";
       display: block;
@@ -23,6 +36,8 @@
       @include hover(background-color, $primary-accent-color);
       left: 0;
       top: calc(100% + 12px);
+      visibility: visible;
+      @include hover(opacity, 1);
     }
   }
 
@@ -35,7 +50,7 @@
       @include hover(fill, $primary-accent-color);
     }
 
-    &:focus .tools__item::after {
+    &::after {
       content: "";
       display: block;
       width: 100%;
@@ -44,6 +59,21 @@
       @include hover(background-color, $primary-accent-color);
       left: 0;
       top: calc(100% + 12px);
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &:focus::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      @include hover(background-color, $primary-accent-color);
+      left: 0;
+      top: calc(100% + 12px);
+      visibility: visible;
+      @include hover(opacity, 1);
     }
   }
 
