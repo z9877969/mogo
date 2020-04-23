@@ -23,16 +23,28 @@
   }
 
   &__btn {
-    width: 160px;
-    height: 40px;
-    margin: 0 auto;
-    @include flex(center, center);
-    @include primary-title-font(14px, 700, 1.2);
-    border: 3px solid $primary-white-color;
-    text-transform: uppercase;
-
     &--decor {
       color: $primary-white-color;
+
+      width: 160px;
+      height: 40px;
+      margin: 0 auto;
+      @include flex(center, center);
+      @include primary-title-font(14px, 700, 1.2);
+      border: 3px solid $primary-white-color;
+      text-transform: uppercase;
+
+      // &:hover {
+      //   color: red;
+
+      //   & .header-title__btn {
+      //   }
+      // }
+
+      &:focus {
+        @include hover(border, 3px solid $social-bg-hover);
+        @include hover(color, $social-bg-hover);
+      }
     }
   }
 }

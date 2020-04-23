@@ -273,7 +273,8 @@ button {
   margin-bottom: 125px;
 }
 
-.header-title__btn {
+.header-title__btn--decor {
+  color: #ffffff;
   width: 160px;
   height: 40px;
   margin: 0 auto;
@@ -288,8 +289,13 @@ button {
   text-transform: uppercase;
 }
 
-.header-title__btn--decor {
-  color: #ffffff;
+.header-title__btn--decor:focus {
+  border: 3px solid #f38181;
+  transition: border 0.3s linear;
+  cursor: pointer;
+  color: #f38181;
+  transition: color 0.3s linear;
+  cursor: pointer;
 }
 
 .serv__title {
