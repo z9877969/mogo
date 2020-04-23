@@ -34,13 +34,6 @@
       border: 3px solid $primary-white-color;
       text-transform: uppercase;
 
-      // &:hover {
-      //   color: red;
-
-      //   & .header-title__btn {
-      //   }
-      // }
-
       &:focus {
         @include hover(border, 3px solid $social-bg-hover);
         @include hover(color, $social-bg-hover);
