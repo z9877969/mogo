@@ -1,6 +1,6 @@
 @import "../../utils/mixins.scss";
 .logo {
-  @include primary-title-font(30px, 700, 1.15em);
+  @include primary-title-font(30px, 700, 1.15);
   color: $primary-white-color;
 
   &:hover,

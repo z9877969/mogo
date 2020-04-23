@@ -11,12 +11,12 @@
   }
 
   &__prev {
-    @include secondary-title-font(24px, 1.2em);
+    @include secondary-title-font(24px, 1.2);
     margin-bottom: 18px;
   }
 
   &__main {
     text-transform: uppercase;
-    @include primary-title-font(30px, 700, 1.2em);
+    @include primary-title-font(30px, 700, 1.2);
   }
 }

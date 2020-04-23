@@ -5,7 +5,7 @@
   border-top: 1px solid $primary-border-color;
   @include flex(space-between, center);
   &__copyright {
-    @include primary-title-font(14px, 600, 1.2em);
+    @include primary-title-font(14px, 600, 1.2);
     color: $primary-title-color;
 
     & span {
@@ -23,7 +23,7 @@
     padding-left: 10px;
     border: 1px solid $primary-border-color;
     border-right: none;
-    @include primary-descr-font(15px, 300, 1.2em, italic);
+    @include primary-descr-font(15px, 300, 1.2, italic);
     @include placeholder {
       color: $placeholder-color;
     }
@@ -33,7 +33,7 @@
     width: 150px;
     height: 40px;
     text-transform: uppercase;
-    @include primary-title-font(14px, 700, 1.2em);
+    @include primary-title-font(14px, 700, 1.2);
     color: $primary-white-color;
     background: $serv-icon-color;
     border: none;

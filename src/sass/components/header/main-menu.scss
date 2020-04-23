@@ -21,7 +21,7 @@
 
   &__link {
     text-transform: uppercase;
-    @include primary-title-font(14px, 500, 1.2em);
+    @include primary-title-font(14px, 500, 1.2);
     color: $primary-white-color;
 
     &:hover,

@@ -48,7 +48,7 @@
     &-title {
       margin: 0 0 14px;
       text-transform: uppercase;
-      @include primary-title-font(14px, 600, 1.2em);
+      @include primary-title-font(14px, 600, 1.2);
       color: $primary-title-color;
     }
 
